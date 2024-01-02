@@ -23,6 +23,9 @@ class RemoteBloc{
         else {
           state = RemoteState(0);
         }
+
+        // thieu dong nay ne thang l
+        stateController.sink.add(state);
     });
   }
   void dispose(){

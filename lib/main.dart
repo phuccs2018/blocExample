@@ -5,7 +5,7 @@ import 'blocs/remote_state.dart';
 
 
 void main() async{
-  runApp(const MyApp());
+
   final bloc = RemoteBloc();
 
   bloc.stateController.stream.listen((state) {
@@ -21,6 +21,7 @@ void main() async{
   await Future.delayed(Duration(seconds: 3));
   bloc.eventController.sink.add(MuteEvent(0));
 
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
